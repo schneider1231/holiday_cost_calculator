@@ -5,8 +5,8 @@ This Python script calculates the total cost of a holiday trip based on the dest
 ## Features
 
 - Calculates the cost of the flight based on the destination city.
-- Calculates the total cost of the hotel stay based on the number of nights.
-- Calculates the total cost of the rental car based on the number of days.
+- Calculates the total cost of the hotel stay based on the number of nights you'll stay.
+- Calculates the total cost of the rental car based on the number of days the car is rented.
 - Calculates the overall cost of the holiday trip by summing up the costs of the flight, hotel stay, and car rental.
 
 ## Usage
