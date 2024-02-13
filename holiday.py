@@ -11,10 +11,7 @@ def plane_cost(city_flight):
     }
 
     if city_flight in destinations:
-        cost = destinations[city_flight]  
-    else:
-        print("Incorrect Entry")     
-        cost = 0           
+        cost = destinations[city_flight]         
     return cost   
 
 
@@ -48,10 +45,28 @@ def main():
     and car rental days then calls the functions to calculate the total costs 
     and returns the prices
     """
-    print("Destinations london, tokyo, new york, paris")
+    locations = ["london", "tokyo", "new york", "paris"]
+    print(f"destinations: {locations}")
     city = input("Choose your destination: ").lower()
-    nights = int(input("How many nights you will be staying: "))
-    rent_days = int(input("How many days you will rent a car: "))
+
+    while city not in locations:
+        print("incorrect entry")
+        city = input("Choose your destination: ").lower()
+
+    while True:    
+        try:
+            nights = int(input("How many nights you will be staying: "))
+            break
+        except:
+            print("Enter a number pls")   
+
+    while True:    
+        try:
+            rent_days = int(input("How many days you will rent a car: "))
+            break
+        except:
+            print("Enter a number pls")   
+    
 
     hotel_total = hotel_cost(nights)
     flight_total = plane_cost(city)
